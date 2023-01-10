@@ -1,0 +1,113 @@
+// 基本样式
+@charset "utf-8";
+@import url("./animation.less");
+@import url("./common.less");
+@import url("./selElement.less");
+@import url("./public.less");
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+* {
+  color: #333333;
+  font-size: 14px;
+  font-family:"Microsoft YaHei";
+}
+
+/*去掉a标签点击效果*/
+a, a:hover, a:active, a:visited, a:link, a:focus {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  background: none;
+  text-decoration: none;
+}
+
+/* 去除IE输入框的X标记 */
+input[type=text]::-ms-clear {
+  display: none;
+}
+
+/* 去除IE输入框的小眼睛标记 */
+input[type=password]::-ms-reveal {
+  display: none;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  min-width: 1336px;
+  min-height: 668px;
+  #app {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: auto;
+    overflow-y: auto;
+  }
+  .alert-window {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .1);
+    z-index: 102;
+    .fc()
+  }
+  li {
+    list-style: none;
+  }
+
+  .el-loading-spinner {
+    i {
+      .f24()
+    }
+  }
+}
+
+/*设置滚动条*/
+div::-webkit-scrollbar, textarea::-webkit-scrollbar, iframe::-webkit-scrollbar { /*滚动条整体部分，其中的属性有width,height,background,border等*/
+  width: 6px;
+  height: 6px;
+}
+
+div::-webkit-scrollbar-button, textarea::-webkit-scrollbar-button, iframe::-webkit-scrollbar-button { /*滚动条两端的按钮，可以用display:none让其不显示，也可以添加背景图片，颜色改变显示效果*/
+  display: none;
+}
+
+div::-webkit-scrollbar-track, textarea::-webkit-scrollbar-track, iframe::-webkit-scrollbar-track { /*外层轨道，可以用display:none让其不显示，也可以添加背景图片，颜色改变显示效果*/
+  display: none;
+}
+
+div::-webkit-scrollbar-track-piece, textarea::-webkit-scrollbar-track-piece, iframe::-webkit-scrollbar-track-piece { /*内层轨道，滚动条中间部分*/
+  background: #fff;
+}
+
+div::-webkit-scrollbar-thumb, textarea::-webkit-scrollbar-thumb, iframe::-webkit-scrollbar-thumb { /*滚动条里面可以拖动的那部分*/
+  background: #DCDFE6;
+  border-radius: 4px;
+}
+
+div::-webkit-scrollbar-corner, textarea::-webkit-scrollbar-corner, iframe::-webkit-scrollbar-corner { /*边角*/
+  background: #fff;
+}
+
+div::-webkit-scrollbar-resizer, textarea::-webkit-scrollbar-resizer, iframe::-webkit-scrollbar-resizer { /*定义右下角拖动块的样式*/
+  background: #fff;
+}
+
+/*ie中滚动条样式*/
+div, textarea {
+  scrollbar-arrow-color: #DCDFE6; /*三角箭头的颜色*/
+  scrollbar-face-color: #DCDFE6; /*立体滚动条的颜色*/
+  scrollbar-3dlight-color: #DCDFE6; /*立体滚动条亮边的颜色*/
+  scrollbar-highlight-color: #fff; /*滚动条空白部分的颜色*/
+  scrollbar-shadow-color: #fff; /*立体滚动条阴影的颜色*/
+  scrollbar-darkshadow-color: #fff; /*立体滚动条强阴影的颜色*/
+  scrollbar-track-color: #fff; /*立体滚动条背景颜色*/
+  scrollbar-base-color: #fff; /*滚动条的基本颜色*/
+}

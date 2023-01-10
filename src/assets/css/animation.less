@@ -1,0 +1,96 @@
+/**
+    动画
+*/
+//渐变
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+
+//动画
+.slide-up-enter-active, .slide-up-leave-active {
+  transition: all .35s;
+}
+
+.slide-up-enter, .slide-up-leave-to {
+  transform: translateY(100%)
+}
+
+.slide-down-enter-active, .slide-down-leave-active {
+  transition: all .35s;
+}
+
+.slide-down-enter, .slide-down-leave-to {
+  transform: translateY(-100%)
+}
+
+.slide-left-enter-active, .slide-left-leave-active {
+  transition: all .35s;
+}
+
+.slide-left-enter, .slide-left-leave-to {
+  transform: translateX(-100%)
+}
+
+.slide-right-enter-active, .slide-right-leave-active {
+  transition: all .35s;
+}
+
+.slide-right-enter, .slide-right-leave-to {
+  transform: translateX(100%)
+}
+
+//动画加渐变
+.slide-fade-enter-active {
+  transition: all .35s ease;
+}
+
+.slide-fade-leave-active {
+  transition: all .35s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+
+.slide-fade-enter, .slide-fade-leave-to {
+  //transform: translateX(100%);
+  transform: translateX(50px);
+  opacity: 0;
+}
+
+//用于路由
+.slide2-fade-enter-active {
+  transition: all .35s cubic-bezier(1.0, 0.5, 0.8, 1);
+}
+
+.slide2-fade-enter {
+  //transform: translateX(100%);
+  transform: translateX(100px);
+  opacity: 0;
+}
+
+//列表排序
+.flip-list-move {
+  transition: transform 1s;
+}
+
+//自定义动画
+.bounce-enter-active {
+  animation: bounce-in .5s;
+}
+
+.bounce-leave-active {
+  animation: bounce-in .5s reverse;
+}
+
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

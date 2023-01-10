@@ -1,0 +1,193 @@
+/*登录页input*/
+.login-sel-input .el-input__inner{
+  background-color: rgba(0,0,0,0);
+}
+/*去掉多选框的focus*/
+.el-checkbox__input.is-focus .el-checkbox__inner{
+	border-color: #DCDFE6;
+}
+.el-checkbox__input.is-checked .el-checkbox__inner{
+	border-color: #409EFF;
+}
+/*去掉树focus*/
+/*.sel-only-check .el-tree-node>.el-tree-node__content:hover{
+	background-color: #F5F7FA;
+}
+.sel-only-check .el-tree-node:focus>.el-tree-node__content{
+	background-color: #fff;
+}*/
+/*树中单选框*/
+.sel-only-check .el-radio__label{
+    display: none;
+  }
+/*左侧导航*/
+.sel-element-nav{
+	border-right: none;
+    background:#f0f2f5;
+}
+.sel-element-nav .el-menu-item, .el-submenu__title{
+	height: 48px;
+	line-height: 48px;
+}
+.sel-element-nav .el-submenu.is-active .el-submenu__title{
+	color: #2F8DED;
+}
+.sel-element-nav .el-menu-item-group__title{
+	display: none;
+}
+.sel-element-nav .nav-img{
+	display: inline-block;
+	width: 18px;
+    //height: 22px;
+    margin-right: 10px;
+}
+
+.sel-element-nav .el-menu-item.is-active{
+	position: relative;
+	//font-size: 16px;
+	color: #1890ff;
+	background: rgba(47,141,237,0.08);
+    span{
+      color: #2F8DED;
+    }
+}
+.el-submenu.is-active{
+  .el-submenu__title{
+    span{
+      color: #2F8DED!important;
+    }
+  }
+}
+.sel-element-nav .el-menu-item.is-active:before{
+	content: "";
+	width: 4px;
+	height: 48px;
+	background: rgba(47, 141, 237, 1);
+	position: absolute;
+  right: 0;
+}
+.sel-element-nav .el-menu-item-group .el-menu-item{
+	padding-left: 65px !important;
+	padding-right: 0 !important;
+}
+/*表格中单选框*/
+.sel-element-table-radio .el-radio__label{
+	display: none;
+}
+.sel-element-table-radio:focus:not(.is-focus):not(:active):not(.is-disabled) .el-radio__inner{
+	box-shadow: 0 0 0 0;
+}
+
+/*树节点选中*/
+.el-tree{
+	background-color: rgba(0,0,0,0);
+}
+.el-tree--highlight-current .el-tree-node.is-current>.el-tree-node__content{
+	color: #2F8DEE;
+	background-color: rgba(47,141,238,0.10);
+}
+.el-tree-node>.el-tree-node__children{
+	overflow: inherit;
+}
+.el-tree-node__content{
+	width: max-content;
+  min-width: 100%;
+}
+
+/*textarea*/
+.el-textarea__inner{
+	height: 100%;
+}
+/*表格中按钮*/
+/*去掉按钮focus*/
+/*.sel-element-table-btn:focus{
+	color: #606266;
+  border-color: #DCDFE6;
+  background-color: #fff;
+}
+.sel-element-table-btn:hover{
+	color: #409EFF;
+  border-color: #c6e2ff;
+  background-color: #ecf5ff;
+}
+.sel-element-table-btn:active{
+	color: #3a8ee6;
+  border-color: #3a8ee6;
+  outline: 0;
+  background-color: #ecf5ff;
+}*/
+
+/*日期选择器中间至字*/
+.el-date-editor .el-range-separator{
+	width: 10%;
+}
+.avatar-uploader .el-upload {
+  border: 1px dashed #d9d9d9;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.avatar-uploader .el-upload:hover {
+  border-color: #409EFF;
+}
+.avatar-uploader-icon {
+  font-size: 28px;
+  color: #8c939d;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+}
+.avatar {
+  width: 100px;
+  height: 100px;
+  display: block;
+}
+/*媒体查询兼容1280*/
+@media screen and (max-width: 1359px) {
+  .el-button+.el-button{
+    margin-left: 4px;
+  }
+}
+/*表格中选择框*/
+.el-table-column--selection .cell{
+  padding-right: 10px;
+  padding-left: 10px;
+}
+/* 解决在IE上，表格内容超出后悬浮不显示 */
+.el-table .cell{
+  padding-right: 0px;
+}
+.el-table .cell, .el-table--border td:first-child .cell, .el-table--border th:first-child .cell{
+  padding-left: 0px;
+}
+.el-table th>.cell{
+  padding-right: 0px;
+  padding-left: 0px;
+}
+.el-pagination__total{
+  margin-right: 0;
+  margin-left: 10px;
+}
+.el-pagination button, .el-pagination span:not([class*=suffix]){
+  line-height: 30px;
+}
+/* 提示宽度 */
+.el-tooltip__popper {
+  max-width: 99vw;
+}
+
+.el-button.el-button--primary{
+  span{
+    color:#fff;
+  }
+}
+
+//*label红色
+.red-label>label::before {
+  content: "*";
+  position: relative;
+  left:-3px;
+  color: red;
+}

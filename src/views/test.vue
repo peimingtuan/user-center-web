@@ -1,0 +1,114 @@
+<template>
+    <div class="mainBody">
+        <el-table
+                :data="tableData"
+                border
+                :span-method="objectSpanMethod"
+                style="width: 1000px">
+            <el-table-column
+                    prop="date"
+                    fixed
+                    label="日期"
+                    width="150">
+            </el-table-column>
+            <el-table-column
+                    prop="name"
+                    fixed
+                    label="姓名"
+                   width="120">
+            </el-table-column>
+            <el-table-column label="配送信息">
+                <el-table-column label="地址">
+                    <el-table-column
+                            prop="province"
+                            label="省份"
+                            width="120">
+                    </el-table-column>
+                    <el-table-column
+                            prop="city"
+                            label="市区"
+                            width="120">
+                    </el-table-column>
+                    <el-table-column
+                            prop="address"
+                            label="地址"
+                            width="300">
+                    </el-table-column>
+                    <el-table-column
+                            prop="zip"
+                            label="邮编"
+                            width="120">
+                    </el-table-column>
+                </el-table-column>
+            </el-table-column>
+        </el-table>
+    </div>
+</template>
+
+<script>
+    export default {
+        data(){
+            return{
+                error_404:"data:image/png;base64,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",
+                tableData: [{
+                    date: '2016-05-03',
+                    name: '王小虎',
+                    province: '上海',
+                    city: '普陀区',
+                    address: '上海市普陀区金沙江路 1518 弄',
+                    zip: 200333
+                }, {
+                    date: '2016-05-02',
+                    name: '王小虎',
+                    province: '上海',
+                    city: '普陀区',
+                    address: '上海市普陀区金沙江路 1518 弄',
+                    zip: 200333
+                }, {
+                    date: '2016-05-04',
+                    name: '王小虎',
+                    province: '上海',
+                    city: '普陀区',
+                    address: '上海市普陀区金沙江路 1518 弄',
+                    zip: 200333
+                }, {
+                    date: '2016-05-01',
+                    name: '王小虎',
+                    province: '上海',
+                    city: '普陀区',
+                    address: '上海市普陀区金沙江路 1518 弄',
+                    zip: 200333
+                }]
+            }
+        },
+        mounted(){
+          console.log('子页面:',location.href)
+        },
+        methods:{
+            objectSpanMethod({ row, column, rowIndex, columnIndex }) {
+                console.log(row, column, rowIndex, columnIndex)
+                if (columnIndex === 0) {
+                    if (rowIndex % 2 === 0) {
+                        return {
+                            rowspan: 2,
+                            colspan: 1
+                        };
+                    } else {
+                        return {
+                            rowspan: 0,
+                            colspan: 0
+                        };
+                    }
+                }
+            }
+        }
+    }
+</script>
+
+<style lang="less" scoped>
+    .mainBody{
+        width:100vw;
+        height:100vh;
+        padding:20px;
+    }
+</style>

@@ -1,0 +1,408 @@
+/* loding加载自定义 */
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    /* margin: 0;
+    padding: 0;
+    border: 0; */
+    font-size: 100%;
+    font-family: "Microsoft YaHei"!important;
+    font: inherit;
+    vertical-align: baseline;
+    text-decoration: none;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+* {
+    font-family: "微软雅黑";
+}
+
+
+/* 文本选中的样式 */
+
+.custom_text_sel {
+    background-color: #E6F7FF;
+}
+
+
+/* 针对于elementui个性化的样式 */
+
+.el-loading-spinner .circular {
+    width: 42px;
+    height: 42px;
+    animation: loading-rotate 2s linear infinite;
+    display: none;
+}
+
+.el-loading-spinner {
+    background-image: url("../imgs/loading.gif");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 160px;
+    height: 90px;
+    position: relative;
+    top: 50%;
+    left: 45%;
+}
+
+.el-loading-spinner i {
+    display: none;
+}
+
+
+/* 表单边框颜色 (input、复选框)*/
+
+.el-input__inner,
+.el-checkbox__inner,
+.el-radio__inner,
+.el-textarea__inner {
+    border: 1px solid #bfbfbf;
+    font-size: 16px;
+}
+
+
+/* 提示信息颜色加深 */
+
+.el-message--success {
+    background-color: #F0F9EB;
+    border-color: #5DC692;
+}
+
+.el-message--warning {
+    background-color: #FFF6E6;
+    border-color: #F57B00;
+}
+
+.el-message--error {
+    background-color: #FEF0F0;
+    border-color: #F5212D;
+}
+
+.el-message__content {
+    font-size: 16px;
+}
+
+
+/* 弹框自定义边框 */
+
+.el-message-box__header,
+.el-dialog__header {
+    border-bottom: 1px solid #DDE0E3;
+}
+
+.el-message-box__btns,
+.el-dialog__footer {
+    border-top: 1px solid #DDE0E3;
+}
+
+.el-message-box__content {
+    padding: 35px 15px;
+    font-size: 16px;
+    color: #333;
+}
+
+
+/* 滚动条 */
+
+.c-search-table {
+    width: 800px;
+    height: 200px;
+    /*这里我用了计算属性*/
+}
+
+.beauty-Scroll .el-scrollbar {
+    height: 100%;
+    /*此处一定要设置高度，不然内层的计算属性不生效*/
+}
+
+.beauty-Scroll .el-scrollbar__wrap {
+    width: 817px;
+    /*将垂直滚动条挤到可视区域之外*/
+    height: 217px;
+    /*将水平滚动条挤到可视区域之外*/
+}
+
+.el-scrollbar__thumb {
+    background: #BEBEBE;
+}
+
+.el-scrollbar__thumb:hover {
+    background: #999999;
+}
+
+
+/* //页面颜色 */
+.radio{
+    border-radius:50%;
+    width:150px;
+    height:100px;
+    line-height:33px;
+    text-align:center;
+    color:#fff;
+    font-size:14px;
+    float: left;
+    margin-bottom:10px;
+}
+.ldt-button-default{
+  background-color:#1890FF;
+}
+.ldt-button-nav{
+background-color:#096DD9;
+}
+.ldt-button-default-hover{
+background-color: #66B1FF;
+}
+.ldt-button-qian{
+background-color:#EDF9FF;
+border:1px solid #1890FF;
+}
+.radio1{
+    color:#999999;
+}
+.radio2{
+    color:#F67B00;
+}
+.ldt-tab-bg{
+  background-color:#F5F6F7;
+}
+
+
+/* 功能色 */
+.ldt-button-success{
+    background-color:#1CAF66;
+}
+.ldt-button-error{
+    background-color:#F67B00;
+}
+.ldt-button-warning{
+background-color:#F5222D;
+}
+
+
+/* 文字的颜色 */
+.ldt-title-default{
+    color:#333333;
+}
+.ldt-paragraph-default{
+  color:#666;
+}
+.ldt-tip-default{
+    color:#999999;
+}
+.ldt-input-default{
+    color:#BFBFBF;
+}
+.ldt-divider-default{
+ color:#DEE3E7;
+}
+
+
+/* //特殊文字 */
+.ldt-text-special{
+  color:#6955AF;
+}
+.ldt-info-special{
+color:#E65114;
+}
+.ldt-bg-special{
+   background-color: #FFFBF2; 
+}
+.ldt-title-bg-qian{
+    background-color:#EFF3FB;
+}
+.ldt-title-bg{
+    background-color:#DBE9FF;
+}
+
+/* 字体大小 */
+.ldt-main-title-fs{
+    font-size:20px;
+}
+.ldt-title-fs{
+    font-size:18px;
+}
+.ldt-small-title-fs{
+    font-size:16px;
+    line-height:28px;
+}
+.ldt-body-fs{
+    font-size:16px;
+    line-height:28px;
+}
+.ldt-normal-text-fs{
+    font-size:14px;
+    line-height:24px;
+}
+.overflow-text{
+    overflow: hidden;
+white-space: nowrap;
+text-overflow: ellipsis;
+}
+.overflow-text-line{
+    overflow: hidden;
+white-space: nowrap;
+text-overflow: ellipsis;
+}
+.overflow-text-line2{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+.overflow-text-line3{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+.overflow-text-line4{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+}
+.overflow-text-line5{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    overflow: hidden;
+}
+
+/* //居中 */
+.ldt-text-center{
+  text-align:center;
+}
+.ldt-text-left{
+    text-align:left;
+  }
+  .ldt-text-right{
+    text-align:right;
+  }
